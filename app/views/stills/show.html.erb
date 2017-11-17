@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @still.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @still.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @still.phone %>
+</p>
+
+<%= link_to 'Edit', edit_still_path(@still) %> |
+<%= link_to 'Back', stills_path %>

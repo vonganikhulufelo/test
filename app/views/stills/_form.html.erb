@@ -1,0 +1,32 @@
+<%= form_with(model: still, local: true) do |form| %>
+  <% if still.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(still.errors.count, "error") %> prohibited this still from being saved:</h2>
+
+      <ul>
+      <% still.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :still_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :still_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :still_phone %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
